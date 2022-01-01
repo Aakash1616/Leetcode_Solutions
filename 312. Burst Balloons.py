@@ -1,3 +1,6 @@
+#time complexity : O(n^3)
+#space complexity: O(n^2)
+
 class Solution:
     def maxCoins(self, A):
         A, n = [1] + A + [1], len(A) + 2
