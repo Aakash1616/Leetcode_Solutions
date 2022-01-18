@@ -6,10 +6,10 @@ class Solution:
         for i in lst:
             if i==1:
                 if temp>=3:
-                    res+=(temp-(temp%2==0))//2
+                    res+=(temp-(1-(temp&1)))>>1
                 temp = 0 
             else:
                 temp+=1 
             if res>=n:
                 return True 
-        return res+((temp-(temp%2==0))//2)>=n
+        return res+((temp-(1-(temp&1)))>>1)>=n
