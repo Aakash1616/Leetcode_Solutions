@@ -8,9 +8,7 @@ class Solution:
         if not head.next:
             return head
         slow = fast = head
-        while(fast.next and fast.next.next):
+        while(fast and fast.next):
             slow = slow.next 
             fast = fast.next.next 
-        if fast.next:
-            return slow.next
         return slow
