@@ -7,4 +7,4 @@ class Solution:
             else:
                 target//=2 
             res+=1 
-        return res+abs(target-startValue)
+        return res+(startValue-target)
