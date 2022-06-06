@@ -6,8 +6,6 @@
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        if headA is None or headB is None: return 
-        
         ptra, ptrb = headA, headB 
         
         while(ptra!=ptrb):
