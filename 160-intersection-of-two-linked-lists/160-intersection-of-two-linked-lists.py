@@ -5,11 +5,9 @@
 #         self.next = None
 
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        ptra, ptrb = headA, headB 
-        
-        while(ptra!=ptrb):
-            ptra = headB if ptra is None else ptra.next 
-            ptrb = headA if ptrb is None else ptrb.next  
-            
-        return ptra 
+    def getIntersectionNode(self, headA, headB):
+        p, q = headA, headB;
+        while p != q:
+            p = p.next if p else headB;
+            q = q.next if q else headA;
+        return p;
