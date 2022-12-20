@@ -9,5 +9,4 @@ class Solution:
             for i in rooms[ele]:
                 if not vis[i]:
                     q.append(i) 
-        if all(vis): return True 
-        return False 
+        return all(vis)
